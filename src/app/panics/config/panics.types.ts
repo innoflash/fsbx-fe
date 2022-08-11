@@ -19,3 +19,9 @@ export type PanicModel = {
 export type PanicsResponse = ServerResponse<{
     panics: PanicModel[];
 }>;
+
+export type SendPanicResponse = ServerResponse<{
+    panic_id: number;
+}>;
+
+export type PanicDetails = Omit<PanicModel, 'id' | 'created_at' | 'created_by'>;
