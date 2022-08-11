@@ -16,6 +16,6 @@ export class NotificationService {
         this.message = message;
         this.notificationType = type;
 
-        interval(2000).pipe(first()).subscribe(res => this.showNotificationSubject.next(false));
+        interval(2500).pipe(first()).subscribe(res => this.showNotificationSubject.next(false));
     }
 }
