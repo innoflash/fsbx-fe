@@ -5,6 +5,7 @@ import { PanicsRoutingModule } from './panics-routing.module';
 import { HomeComponent } from './home/home.component';
 import { SendComponent } from './send/send.component';
 import { HttpClientModule } from "@angular/common/http";
+import { ReactiveFormsModule } from "@angular/forms";
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HttpClientModule } from "@angular/common/http";
     imports: [
         CommonModule,
         PanicsRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+        ReactiveFormsModule
     ]
 })
 export class PanicsModule {
