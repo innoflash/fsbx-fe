@@ -27,7 +27,9 @@
         <td>{{ panic.longitude }}</td>
         <td>{{ panic.panic_type }}</td>
         <td>{{ panic.details }}</td>
-        <td>@mdo</td>
+        <td>
+            <button class="btn btn-danger bt-sm" (click)="cancelPanic(panic.id)">Cancel</button>
+        </td>
     </tr>
     </tbody>
 </table>
