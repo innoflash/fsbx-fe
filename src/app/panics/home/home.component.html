@@ -5,9 +5,9 @@
     </button>
 </div>
 
-<div class="loader">Loading...</div>
+<div class="loader" *ngIf="isLoading">Loading...</div>
 
-<table class="table table-striped">
+<table class="table table-striped" *ngIf="!isLoading">
     <thead>
     <tr>
         <th scope="col">Created By</th>
@@ -20,13 +20,13 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
+    <tr *ngFor="let panic of panics">
+        <td>{{ panic.created_by.name }}</td>
+        <td>{{ panic.created_at }}</td>
+        <td>{{ panic.latitude }}</td>
+        <td>{{ panic.longitude }}</td>
+        <td>{{ panic.panic_type }}</td>
+        <td>{{ panic.details }}</td>
         <td>@mdo</td>
     </tr>
     </tbody>
