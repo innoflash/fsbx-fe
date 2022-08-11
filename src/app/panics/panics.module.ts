@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { PanicsRoutingModule } from './panics-routing.module';
 import { HomeComponent } from './home/home.component';
+import { SendComponent } from './send/send.component';
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    SendComponent
   ],
   imports: [
     CommonModule,
