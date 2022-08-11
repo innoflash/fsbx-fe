@@ -1,16 +1,16 @@
 import { Injectable } from "@angular/core";
-import { CanActivate, Router } from "@angular/router";
+import { CanActivate, CanLoad, Router } from "@angular/router";
 import { TokenService } from "../services/token.service";
 
 @Injectable()
-export abstract class ParentAuthGuard implements CanActivate {
+export abstract class ParentAuthGuard implements CanLoad {
     protected abstract shouldBeLoggedIn: boolean;
     protected abstract redirectUrl: string;
 
     public constructor(private readonly tokenService: TokenService, private readonly router: Router) {
     }
 
-    public canActivate(): boolean {
+    public canLoad(): boolean {
         const hasToken = !!this.tokenService.getToken();
 
         if (hasToken && this.shouldBeLoggedIn) {

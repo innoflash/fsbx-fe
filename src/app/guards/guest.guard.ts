@@ -5,6 +5,6 @@ import { ParentAuthGuard } from "./parent-auth.guard";
     providedIn: 'root'
 })
 export class GuestGuard extends ParentAuthGuard {
-    protected redirectUrl = '/dashboard';
+    protected redirectUrl = '/panics';
     protected shouldBeLoggedIn = false;
 }
