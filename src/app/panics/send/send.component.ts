@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 @Component({
@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
   styles: [
   ]
 })
-export class SendComponent implements OnInit {
+export class SendComponent {
   public readonly panicForm: FormGroup;
 
   public constructor(private readonly fb: FormBuilder) {
@@ -19,7 +19,7 @@ export class SendComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-  }
+  public sendPanic(): void {
 
+  }
 }
