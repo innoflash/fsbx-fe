@@ -13,12 +13,10 @@ export abstract class ParentAuthGuard implements CanLoad {
     public canLoad(): boolean {
         const hasToken = !!this.tokenService.getToken();
 
-        if (hasToken && this.shouldBeLoggedIn) {
+        if (hasToken === this.shouldBeLoggedIn) {
             return true;
         }
 
-        this.router.navigate([this.redirectUrl]);
-
-        return false;
+        return !this.router.navigate([this.redirectUrl]);
     }
 }
